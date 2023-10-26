@@ -9,7 +9,29 @@ int main(int argc, char* argv[]) {
 
   // TODO: Validate that there is at least one command line argument.
   // If not, print an error message and return a non-zero value.
-
+  int number_argument{static_cast<int>(arguments.size())-1};
+  if (number_argument <1) {
+    std::cout << "error: you must supply atleast one number";
+    return 0;
+  } 
+    double sum{0.0};
+    double average{0.0};
+    bool first{true};
+    for (std::string argument:arguments) {
+      if(first)
+      {
+        first=false;
+      }
+      else{
+        double number{std::stod(argument)};
+      sum += number;
+      }
+    return 0;
+    }
+    average = (sum / number_argument);
+    std::cout << "average = " << average; 
+  
+  
   // TODO: Write a for-each loop to sum (add up) all of the command line
   // arguments.
   // Use a double or float type so that your program preserves fractional
@@ -29,3 +51,4 @@ int main(int argc, char* argv[]) {
 
   return 0;
 }
+
