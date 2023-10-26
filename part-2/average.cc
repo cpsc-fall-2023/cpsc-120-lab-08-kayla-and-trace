@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
         double number{std::stod(argument)};
       sum += number;
       }
-    return 0;
+
     }
     average = (sum / number_argument);
     std::cout << "average = " << average; 
